@@ -1,0 +1,77 @@
+.field{
+    height:600px;
+    width:1200px;
+    background-color: lightblue;
+    float: right;
+    margin-right: 4em;
+    margin-top:.5em;
+    border: 10px solid darkgray;
+    border-radius: 10px 10px;
+    box-shadow: 
+    0 0 0 5px lightblue,
+    0 0 0 7px darkgray
+}
+.inputs{
+    float:left;
+    background-color: grey;
+      padding: 3em;  
+    margin-left: 8em;
+    margin-top:2.75em;   
+    border: 8px solid lightblue;
+    border-radius: 10px 10px;
+    box-shadow: 
+     0 0 0 5px darkgray,
+    0 0 0 9px lightblue 
+    
+}
+ h3{
+    padding:1em, 0em ;
+    color:lightgray;
+
+} 
+h2{
+    color:lightgray;
+}
+.titles{
+    text-align: center;
+    margin-top:1.5em;
+}
+button{
+    transform: translate(15em ,0em);
+}
+body{
+    background-color: lightgray;
+}
+.innerdiv{
+    transform: translate(0em, -2em);
+}
+hr{
+    border: 3px solid lightblue;
+}
+.feedback{
+    background-color: gray;
+    height: 12em;
+    width:64em;
+    float:right;
+    margin-right:9em;
+    padding:1em;
+    margin-top:3.5em;
+    border: 5px solid lightblue;
+    border-radius: 10px 10px;
+     box-shadow: 
+    0 0 0 3px darkgray,
+    0 0 0 5px lightblue
+}
+.innerfeed1{
+   float:left;
+   height:15%;
+   width:30%;
+   background-color: gray
+
+}
+.innerfeed2{
+ float:right; 
+ height:15%;
+ width:39%;
+ background-color:gray
+}
