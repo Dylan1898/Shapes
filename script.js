@@ -22,7 +22,9 @@ class Circle extends Shape{
 
 class Triangle extends Shape{
     constructor(height){
-        this.height=height
+        this.height=height;
+        this.base=height;
+        this.width=height;
     }
 };
 

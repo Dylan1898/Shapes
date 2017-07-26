@@ -24,6 +24,21 @@
     0 0 0 9px lightblue 
     
 }
+h1{
+	 transform: translate(19.2em, -0.1em); 
+    font-size: 1.6em;
+    color:darkgrey;
+    text-shadow: 4px 4px lightblue;
+    width:1em;
+    word-break:break-word;
+    float:left;
+    letter-spacing:1em;
+    white-space:pre-wrap;
+    font-variant: small-caps;
+   
+   
+
+}
  h3{
     padding:1em, 0em ;
     color:lightgray;
@@ -50,7 +65,7 @@ hr{
 }
 .feedback{
     background-color: gray;
-    height: 12em;
+    height: 14em;
     width:64em;
     float:right;
     margin-right:12.5em;
@@ -65,13 +80,13 @@ hr{
 .innerfeed1{
    float:left;
    height:15%;
-   width:30%;
+   width:45%;
    background-color: gray
 
 }
 .innerfeed2{
  float:right; 
  height:15%;
- width:39%;
+ width:45%;
  background-color:gray
 }
