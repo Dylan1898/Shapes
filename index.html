@@ -16,27 +16,27 @@
         <div class='innerdiv'>
             <hr>
             <H2 class='titles'>Square </H2>
-            <H3>Side Length: <input placeholder="Side Length"></input>
+            <H3>Side Length: <input placeholder="Side Length" id='sideLength'></input>
                 <H3>
-                    <button>Insert</button>
+                    <button onclick="squareCre()">Insert</button>
                     <hr>
                     <H2 class='titles'>Rectangle</H2>
-                    <H3>Width: <input placeholder="Width"></input>
+                    <H3>Width: <input placeholder="Width" id='recWidth'></input>
                     </H3>
                     </br>
-                    <H3>Height: <input placeholder="Height"></input>
+                    <H3>Height: <input placeholder="Height" id='recHeight'></input>
                     </H3>
-                    <button>Insert</button>
+                    <button onclick="rectangleCre()">Insert</button>
                     <hr>
                     <H2 class='titles'>Circle</H2>
-                    <H3>Radius: <input placeholder="Radius"></input>
+                    <H3>Radius: <input placeholder="Radius" id='radius'></input>
                     </H3>
-                    <button>Insert</button>
+                    <button onclick="circleCre()">Insert</button>
                     <hr>
                     <H2 class='titles'>Triangle</H2>
-                    <H3>Height: <input placeholder="Height"></input>
+                    <H3>Height: <input placeholder="Height" id='triangleHeight'></input>
                     </H3>
-                    <button>Insert</button>
+                    <button onclick="triangleCre()">Insert</button>
                     <hr>
         </div>
     </div>
@@ -44,19 +44,19 @@
     </div>
     <div class='feedback'>
         <div class='innerfeed1'>
-            <h2>Shape Name:</h2>
+            <h2 id='nameFeed'>Shape Name:</h2>
             <hr>
-            <h2>Width:</h2>
+            <h2 id='widthFeed'>Width:</h2>
             <hr>
-            <h2>Height:</h2>
+            <h2 id='heightFeed'>Height:</h2>
             <hr>
         </div>
         <div class='innerfeed2'>
-            <h2>Radius:</h2>
+            <h2 id='radiusFeed'>Radius:</h2>
             <hr>
-            <h2>Area:</h2>
+            <h2  id='areaFeed'>Area:</h2>
             <hr>
-            <h2>Perimeter:</h2>
+            <h2 id='PerimeterFeed'>Perimeter:</h2>
             <hr>
         </div>
     </div>

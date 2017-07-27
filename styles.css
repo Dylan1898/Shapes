@@ -1,3 +1,4 @@
+/* ------------------------------PAGESTYLING----------------------------- */
 .field{
     height:600px;
     width:1200px;
@@ -89,4 +90,29 @@ hr{
  height:15%;
  width:45%;
  background-color:gray
+}
+/* ------------------------------SHAPES-------------------------------------- */
+.triangle-bottomleft {
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid yellow;
+	border-right: 100px solid transparent;
+}
+.square {
+	 width: 100px;
+	height: 100px; 
+	background: red;
+}
+.rectangle {
+	width: 200px;
+	height: 100px;
+	background: green;
+}
+.circle {
+	width: 100px;
+	height: 100px;
+	background: purple;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
 }
