@@ -9,6 +9,10 @@ class Shape {
         this.sideLength = sideLength;
         this.radius = radius;
         this.base = base;
+        addEventListener('click', function(){
+
+            
+        })
   }
     get area() {
         return this.calcArea();
