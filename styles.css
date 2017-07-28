@@ -3,14 +3,17 @@
     height:600px;
     width:1200px;
     background-color: lightblue;
-    float: right;
+    position: relative;
     margin-right: 8em;
     margin-top:.5em;
     border: 10px solid darkgray;
     border-radius: 10px 10px;
     box-shadow: 
     0 0 0 5px lightblue,
-    0 0 0 7px darkgray
+    0 0 0 7px darkgray;
+    position: absolute;
+    left:30%;
+    overflow:hidden
 }
 .inputs{
     float:left;
@@ -71,7 +74,7 @@ hr{
     float:right;
     margin-right:12.5em;
     padding:1em;
-    margin-top:3.5em;
+    margin-top:42em;
     border: 5px solid lightblue;
     border-radius: 10px 10px;
      box-shadow: 
@@ -92,27 +95,22 @@ hr{
  background-color:gray
 }
 /* ------------------------------SHAPES-------------------------------------- */
-.triangle-bottomleft {
-	width: 0;
-	height: 0;
-	border-bottom: 100px solid yellow;
-	border-right: 100px solid transparent;
+.triangle {
+    height: 0;
+    width: 0;
+    position: absolute
 }
 .square {
-	 width: 100px;
-	height: 100px; 
-	background: red;
+	  
+    background: red;
+    position: absolute
 }
 .rectangle {
-	width: 200px;
-	height: 100px;
-	background: green;
+    background: green;
+    position: absolute
 }
 .circle {
-	width: 100px;
-	height: 100px;
-	background: purple;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	
+    background: purple;
+    position: absolute;
 }
