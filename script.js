@@ -11,7 +11,8 @@ class Shape {
         this.radius = radius;
         this.base = base;
         // deleteShapes()
-        Describe()
+        // Describe()
+        setupDelete()
     }
 }
 
@@ -40,6 +41,7 @@ class Triangle extends Shape {
         this.height = height;
         this.base = height;
         this.width = height;
+        
         // Describe()
     }
 };
@@ -59,7 +61,6 @@ class Rectangle {
 
 function squareCre() {
     var a = document.getElementById('sideLength').value;
-    console.log(a)
     var w = new Square(
         this.name = 'Square',
         this.width = a,
@@ -67,7 +68,6 @@ function squareCre() {
         this.area = (a * a),
         this.perimeter = (a * 4),
         this.radius = 'NA',
-        console.log(this.area)
     )
     var p = document.createElement("div");
     document.getElementById('field').appendChild(p).setAttribute("class", "square shape");
@@ -79,6 +79,7 @@ function squareCre() {
     var randomX = Math.round(Math.random() * availW) + 'px'
     p.style.left = randomX;
     p.style.top = randomY;
+    setupDelete()
 }
 
 
@@ -113,7 +114,7 @@ function circleCre() {
     q.style.top = randomY;
     console.log(randomY)
     document.getElementById('field').appendChild(q).setAttribute("class", "circle shape")
-
+setupDelete()
 }
 
 
@@ -143,6 +144,7 @@ function triangleCre() {
     p.style.left = randomX;
     p.style.top = randomY;
     document.getElementById('field').appendChild(p).setAttribute("class", "triangle shape");
+    setupDelete()
 
 }
 
@@ -153,13 +155,16 @@ function rectangleCre() {
     var d = document.getElementById('recHeight').value;
     var e = document.getElementById('recWidth').value;
     var x = new Rectangle(
-        this.height = d,
+        this.name = 'Rectangle',
         this.width = e,
+        this.height = d,
         this.area = (e * d),
         this.perimeter = (e * 2) + (d * 2),
-        this.radius = 'NA'
+        this.radius = 'NA',
+  
     )
     var p = document.createElement("div")
+    document.getElementById('field').appendChild(p).setAttribute("class", "rectangle shape")
     p.style.height = d + 'px';
     p.style.width = e + 'px';
     var availW = document.getElementById('field').offsetWidth - 60;
@@ -168,16 +173,23 @@ function rectangleCre() {
     var randomX = Math.round(Math.random() * availW) + 'px'
     p.style.left = randomX;
     p.style.top = randomY;
-    console.log(d)
-
-    document.getElementById('field').appendChild(p).setAttribute("class", "rectangle shape")
+    setupDelete()
 }
 
 
 
-function Describe() {
-    addEventListener('click', function () {
-        console.log('clicked')
+// function Describe() {
+    function setupDelete(){
+   var p = document.querySelectorAll('.shape');
+for(var i=0;i<p.length;i++){
+    console.log(p)
+  p[i].addEventListener('click', function(event){
+      console.log(this)
+ Describe.bind(Shape)
+  })}}
+
+function Describe(){
+    console.log('clicked')
         document.getElementById('areaFeed').innerHTML = ('Area:  ')
         document.getElementById('heightFeed').innerHTML = ('Height:  ')
         document.getElementById('widthFeed').innerHTML = ('Width:  ')
@@ -185,15 +197,17 @@ function Describe() {
         document.getElementById('nameFeed').innerHTML = ('Name:  ')
         document.getElementById('radiusFeed').innerHTML = ('Radius:  ')
 
-        document.getElementById('areaFeed').append(this.area)
+        document.getElementById('areaFeed').append(area)
+    console.log(this.area)
         document.getElementById('heightFeed').append(this.height)
         document.getElementById('widthFeed').append(this.width)
         document.getElementById('PerimeterFeed').append(this.perimeter)
         document.getElementById('nameFeed').append(this.name)
         document.getElementById('radiusFeed').append(this.radius)
-    })
+    
 }
-function deleteShapes() {
+    
+// function deleteShapes() {
 // //     var x= document.getElementsByClassName('shape')
 // //     x.addEventListener('dblclick', function (e) {
 // //         this.remove()
@@ -203,5 +217,5 @@ function deleteShapes() {
 // var parent = document.getElementById("field")
 // var child = document.
 // // function randPosition() {
-}
-// // }
+// }
+// }

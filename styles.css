@@ -95,21 +95,21 @@ hr{
  background-color:gray
 }
 /* ------------------------------SHAPES-------------------------------------- */
-.triangle {
+.Triangle {
     height: 0;
     width: 0;
     position: absolute
 }
-.square {
+.Square {
 	  
     background: red;
     position: absolute
 }
-.rectangle {
+.Rectangle {
     background: green;
     position: absolute
 }
-.circle {
+.Circle {
 	
     background: purple;
     position: absolute;
