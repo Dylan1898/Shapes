@@ -5,7 +5,6 @@ triangleHeight
 recHeight
 recWidth
 
-
 document.addEventListener('DOMContentLoaded', function () {
     console.log('dom')
     field = document.getElementById('field')
@@ -22,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     radiusFeed = document.getElementById('radiusFeed')
 
 });
+
 class Shape {
     constructor(type, name, width, height, sideLength, radius, base) {
         this.shape = document.createElement('div')
@@ -35,9 +35,11 @@ class Shape {
         this.shape.addEventListener('dblclick', this.Delete.bind(this))
         this.Position()
     }
+
     draw(){
     field.appendChild(this.shape);
 }
+
 Describe(){
     console.log('clicked')
         document.getElementById('areaFeed').innerHTML = ('Area:  ')
@@ -55,6 +57,7 @@ Describe(){
         document.getElementById('nameFeed').append(this.name)
         document.getElementById('radiusFeed').append(this.radius)       
 }
+    
 Delete(){
     this.shape.remove();
     document.getElementById('areaFeed').innerHTML = ('Area:  ')
@@ -64,6 +67,7 @@ Delete(){
         document.getElementById('nameFeed').innerHTML = ('Shape Name:  ')
         document.getElementById('radiusFeed').innerHTML = ('Radius:  ')
 }
+
 Position(){
     var availW = field.offsetWidth - 60;
     var availH = field.offsetHeight - 60;
@@ -73,8 +77,8 @@ Position(){
     this.shape.style.top = randomY;
     console.log(randomX)
     console.log(randomY)
-}
-}
+    }
+};
 
 class Square extends Shape {
     constructor() {
@@ -88,8 +92,7 @@ class Square extends Shape {
         this.shape.style.height = sideLength.value + 'px';
         this.shape.style.width = sideLength.value + 'px';
         this.draw()
-        // this.Position()
-        
+        sideLength.value=''
     }
 };
 
@@ -107,7 +110,7 @@ class Circle extends Shape {
         this.shape.style.width = circRadius.value + 'px';
         this.shape.style.borderRadius = (circRadius.value / 2) + 'px';
         this.draw()
-        // this.Position()
+        circRadius.value=''    
     }
 };
 
@@ -123,14 +126,15 @@ class Rectangle extends Shape {
         this.shape.style.height = recHeight.value + 'px';
         this.shape.style.width = recWidth.value + 'px';
         this.draw()    
-        // this.Position()
+        recHeight.value=''
+        recWidth.value=''  
     }
 };
 
 class Triangle extends Shape {
     constructor() {
         super('Triangle')
-            this.name = 'Triangle',
+        this.name = 'Triangle',
         this.radius = 'NA',
         this.height = triangleHeight.value,
         this.width = triangleHeight.value,
@@ -140,7 +144,7 @@ class Triangle extends Shape {
         this.shape.style.borderBottom = triangleHeight.value + 'px solid #ffff94';
         this.shape.style.borderLeft = triangleHeight.value + 'px solid transparent';
         this.draw()
-        // this.Position()
+        triangleHeight.value = ''
     }
 };
 
@@ -150,6 +154,7 @@ class Triangle extends Shape {
 
 const squareCre= () => {
     new Square();
+    
 }   
 const rectangleCre= () => {
     new Rectangle();
