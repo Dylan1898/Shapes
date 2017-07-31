@@ -10,9 +10,8 @@ class Shape {
         this.sideLength = sideLength;
         this.radius = radius;
         this.base = base;
-        // deleteShapes()
-        // Describe()
-        setupDelete()
+        
+        
     }
 }
 

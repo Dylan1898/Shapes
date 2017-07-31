@@ -102,15 +102,15 @@ hr{
 }
 .Square {
 	  
-    background: red;
+    background: #FF5555;
     position: absolute
 }
 .Rectangle {
-    background: green;
+    background: lightgreen;
     position: absolute
 }
 .Circle {
 	
-    background: purple;
+    background: mediumpurple;
     position: absolute;
 }
