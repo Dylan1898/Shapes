@@ -6,7 +6,7 @@ recHeight
 recWidth
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('dom')
+   
     field = document.getElementById('field')
     sideLength = document.getElementById('sideLength')
     Radius = document.getElementById('Radius')
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     PerimeterFeed = document.getElementById('PerimeterFeed')
     nameFeed = document.getElementById('nameFeed')
     radiusFeed = document.getElementById('radiusFeed')
+    areaFeed= document.getElementById('areaFeed')
 
 });
 
@@ -41,31 +42,29 @@ class Shape {
 }
 
 Describe(){
-    console.log('clicked')
-        document.getElementById('areaFeed').innerHTML = ('Area:  ')
-        document.getElementById('heightFeed').innerHTML = ('Height:  ')
-        document.getElementById('widthFeed').innerHTML = ('Width:  ')
-        document.getElementById('PerimeterFeed').innerHTML = ('Perimeter:  ')
-        document.getElementById('nameFeed').innerHTML = ('Shape Name:  ')
-        document.getElementById('radiusFeed').innerHTML = ('Radius:  ')
+        areaFeed.innerHTML = ('Area:  ')
+        heightFeed.innerHTML = ('Height:  ')
+        widthFeed.innerHTML = ('Width:  ')
+        PerimeterFeed.innerHTML = ('Perimeter:  ')
+        nameFeed.innerHTML = ('Shape Name:  ')
+        radiusFeed.innerHTML = ('Radius:  ')
 
-        document.getElementById('areaFeed').append(this.area)
-    console.log(this.area)
-        document.getElementById('heightFeed').append(this.height)
-        document.getElementById('widthFeed').append(this.width)
-        document.getElementById('PerimeterFeed').append(this.perimeter)
-        document.getElementById('nameFeed').append(this.name)
-        document.getElementById('radiusFeed').append(this.radius)       
+        areaFeed.append(this.area)
+        heightFeed.append(this.height)
+        widthFeed.append(this.width)
+        PerimeterFeed.append(this.perimeter)
+        nameFeed.append(this.name)
+        radiusFeed.append(this.radius)       
 }
     
 Delete(){
     this.shape.remove();
-    document.getElementById('areaFeed').innerHTML = ('Area:  ')
-        document.getElementById('heightFeed').innerHTML = ('Height:  ')
-        document.getElementById('widthFeed').innerHTML = ('Width:  ')
-        document.getElementById('PerimeterFeed').innerHTML = ('Perimeter:  ')
-        document.getElementById('nameFeed').innerHTML = ('Shape Name:  ')
-        document.getElementById('radiusFeed').innerHTML = ('Radius:  ')
+        areaFeed.innerHTML = ('Area:  ')
+        heightFeed.innerHTML = ('Height:  ')
+        widthFeed.innerHTML = ('Width:  ')
+        PerimeterFeed.innerHTML = ('Perimeter:  ')
+        nameFeed.innerHTML = ('Shape Name:  ')
+        radiusFeed.innerHTML = ('Radius:  ')
 }
 
 Position(){
@@ -75,8 +74,6 @@ Position(){
     var randomX = Math.round(Math.random() * availW) + 'px'
     this.shape.style.left = randomX;
     this.shape.style.top = randomY;
-    console.log(randomX)
-    console.log(randomY)
     }
 };
 
